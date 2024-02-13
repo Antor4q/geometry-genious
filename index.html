@@ -15,14 +15,14 @@
         <!-- main content container -->
         <div class="flex flex-col md:flex-row">
             <!-- shape card container -->
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="flex-1 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Triangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="images/triangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title ">Triangle</h2>
-                      <p class="text-center text-3xl">Area = 0.5 X b X h =</p>
-                        <div class="">
+                      <p class="text-center text-3xl">Area = 0.5 X b X h </p>
+                        <div class="flex items-center">
                             <input id="triangle-base" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
                             <span class="mr-4 ml-2">cm</span>
                             <input class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="h" id="triangle-height">
@@ -43,7 +43,7 @@
                       <h2 class="card-title">Rectangle</h2>
                       <p>Area (A) = w X I</p>
                      
-                      <div class="flex">
+                      <div class="flex items-center">
                         <!-- rectangle length -->
                         <input type="text" name="" id="rectangle-length" class="w-24 text-2xl p-2 rounded-sm" placeholder="length"> 
                         <span class="mr-4 ml-2">cm</span>
@@ -65,9 +65,18 @@
                     <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Parallelogram</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>Area(A) = b X h</p>
+                        <div class="flex items-center">
+                          <!-- parallelogram base -->
+                          <input type="text" name="" id="parallelogram-base" placeholder="b" class="w-24 text-2xl p-2 rounded-sm"><span class="mr-4 ml-2">cm</span>
+                          <!-- parallelogram height -->
+                          <input type="text" name="" placeholder="h" id="parallelogram-height" class="w-24 text-2xl p-2 rounded-sm"><span>cm</span>
+                        </div>
+                        <div>
+                          <p class="text-2xl">Area: <span id="parallelogram-area">0</span> <span>cm<sup>2</sup></span></p>
+                        </div>
                       <div class="card-actions justify-end">
-                        <button  class="btn btn-primary">Buy Now</button>
+                        <button onclick="calculateParallelogram()"  class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>
@@ -115,5 +124,6 @@
 
     <script src="scripts/triangle.js"></script>
     <script src="scripts/rectangle.js"></script>
+    <script src="scripts/parallelogram.js"></script>
 </body>
 </html>
