@@ -1,24 +1,69 @@
 
-function calculateParallelogram(){
-    // parallelogram base 
-    const parallelogramBaseInput = document.getElementById('parallelogram-base');
-    const parallelogramText = parallelogramBaseInput.value;
-    const base =parseFloat(parallelogramText);
-    console.log(base);
+// function calculateParallelogram(){
+//     // parallelogram base 
+//     const parallelogramBaseInput = document.getElementById('parallelogram-base');
+//     const parallelogramText = parallelogramBaseInput.value;
+//     const base =parseFloat(parallelogramText);
+//     console.log(base);
 
-    // parallelogram height
-    const parallelogramHeightInput = document.getElementById('parallelogram-height');
-    const parallelogramText2 = parallelogramHeightInput.value;
-    const height = parseFloat(parallelogramText2);
-    console.log(height);
+//     // parallelogram height
+//     const parallelogramHeightInput = document.getElementById('parallelogram-height');
+//     const parallelogramText2 = parallelogramHeightInput.value;
+//     const height = parseFloat(parallelogramText2);
+//     console.log(height);
 
-    // calculate parallelogram area
+//     // calculate parallelogram area
 
+//     const area = base * height;
+//     console.log('area of the parallelogram is:', area);
+
+//     // display parallelogram area
+//     const parallelogramAreaSpan = document.getElementById('parallelogram-area');
+//     parallelogramAreaSpan.innerText = area;
+
+// }
+
+
+
+// Video 07 Practice
+// function calculateParallelogram(){
+//     //     const parallelogramBaseInput = document.getElementById('parallelogram-base');
+// //     const parallelogramText = parallelogramBaseInput.value;
+// //     const base =parseFloat(parallelogramText);
+// //     console.log(base);
+//     const base = getParallelogramBase();
+//     console.log(base);
+// }
+
+// function getParallelogramBase(){
+//     //     const parallelogramBaseInput = document.getElementById('parallelogram-base');
+// //     const parallelogramText = parallelogramBaseInput.value;
+// //     const base =parseFloat(parallelogramText);
+// //    return base;
+// }
+
+
+function calculateParallelogramArea(){
+    const base = getInputValueById('parallelogram-base');
+    // console.log('base value', base);
+
+    const height = getInputValueById('parallelogram-height');
+    // console.log('height value', height);
+   
     const area = base * height;
-    console.log('area of the parallelogram is:', area);
+    console.log('area of the parallelogram is', area);
+    setInnerTextById('parallelogram-area', area);
+}
+function getInputValueById(inputFieldId){
+    const inputField = document.getElementById(inputFieldId);
+   const inputValueText = inputField.value;
+   const inputValue = parseFloat(inputValueText);
+//    console.log(inputValue);
+  return inputValue;
 
-    // display parallelogram area
-    const parallelogramAreaSpan = document.getElementById('parallelogram-area');
-    parallelogramAreaSpan.innerText = area;
+}
 
+function setInnerTextById(elementId, area){
+    const element = document.getElementById(elementId);
+    element.innerText = area;
 }
