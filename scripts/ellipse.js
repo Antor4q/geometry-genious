@@ -5,3 +5,10 @@ function calculateEllipseArea(){
     setInnerTextById('ellipse=-area', area);
 }
 
+
+function calculateRhombusArea(){
+    const rhombusPeri = getInputValueById('rhombus-perimeter');
+    const rhombusApo = getInputValueById('rhombus-apothem');
+    const area = 0.5 * rhombusPeri * rhombusApo;
+    setInnerTextById('rhombus-area', area);
+}

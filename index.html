@@ -85,9 +85,16 @@
                     <figure><img src="images/rhombus.png" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title">Rhombus</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>Area = 0.5 X p x b </p>
+                      <div class="flex gap-5 items-center">
+                        <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" id="rhombus-perimeter" placeholder="p"><span>cm</span>
+                        <input class="w-24 text-2xl p-2 rounded-sm" type="text" name="" id="rhombus-apothem" placeholder="b"><span>cm</span>
+                      </div>
+                      <div>
+                        <p>Area: <span id="rhombus-area">0</span></p>
+                      </div>
                       <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
                       </div>
                     </div>
                   </div>
